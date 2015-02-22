@@ -1,0 +1,16 @@
+{
+  "name": "Analisis_clase_2",
+  "version": "1.0.0",
+  "description": "Algoritmo para verificar complejidad base en operaciones elementales OE",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jonathan diaz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.11.2",
+    "express-namespace": "^0.1.1",
+    "jade": "^1.9.2"
+  }
+}
