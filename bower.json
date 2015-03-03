@@ -1,0 +1,20 @@
+{
+  "name": "inteligencia_artificial",
+  "version": "0.0.0",
+  "authors": [
+    "jonthdiaz <jonthdiaz@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.14",
+    "jquery": "~2.1.3",
+    "bootswatch-dist": "paper"
+  }
+}

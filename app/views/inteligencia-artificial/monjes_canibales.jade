@@ -1,0 +1,14 @@
+extends ../shared/layout
+
+block title
+    title Problema de monjes y canibales
+block content
+    h1 Problema de monjes y canibales
+    for e in grafo
+        table(class="table table-striped table-hover")
+            tr
+                th Node inicial
+            tr
+                td (#{e.c} , #{e.m}, #{e.b})
+                for hijo in e.hijos
+                    td (#{hijo.c} , #{hijo.m}, #{hijo.b}, #{hijo.mv})

@@ -5,11 +5,13 @@ var express = require('express')
 
 var app = express();
 
-
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/app/views');
 app.set('view engine', 'jade');
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname , 'public')));
+app.use('/components',  express.static(__dirname + '/public/components'));
+
+
 
 
 // app.configure('development', function () {

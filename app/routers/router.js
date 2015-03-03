@@ -14,5 +14,6 @@ module.exports = function  (app) {
 
     app.namespace('/inteligencia-artificial',function  () {
        app.get('/tanques-de-agua', it.tanges_agua); 
+       app.get('/monges-y-canibales', it.monjes_canibales); 
     });
 }
