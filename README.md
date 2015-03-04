@@ -22,7 +22,7 @@ lineas
 
 >npm install
 >
->bower install.
+>bower install
 
 Esto creada dos carpetas una en la raiz que se llama node_modules que son las 
 dependencias de nodejs que maneja la aplicación, la otra carpeta que se crea 
