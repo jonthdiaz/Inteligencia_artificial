@@ -108,7 +108,7 @@ exports.monjes_canibales = function  (req, res) {
     //     }
     // }
 
-    var Estado = function  (c, m, b, mv) {
+    var Estados = function  (c, m, b, mv) {
         this.c = c;
         this.m = m;
         this.b = b;
@@ -128,7 +128,7 @@ exports.monjes_canibales = function  (req, res) {
     for (var i = 0; i <= 1; i++) {
         for (var j = 0; j <= 3; j++) {
             for (var k = 0; k <= 3; k++) {
-                grafo.push(new Estado(j,k,i));
+                grafo.push(new Estados(j,k,i));
             };
         };
     };
@@ -139,14 +139,15 @@ exports.monjes_canibales = function  (req, res) {
                 if(Estado.b == 0){
                     var nm = parseInt(Estado.m) - 2;
                     if(e.c == Estado.c && nm == e.m && e.b == 1){
-                        e.mv = "(" + Estado.c + "," + Estado.m + "," + Estado.b + ")";
+                        // e.mv = "(" + Estado.c + "," + Estado.m + "," + Estado.b + ")";
                         Estado.hijos.push(e);
+                        
                     }
                 }
                 else if(Estado.b == 1){
                     var nm = parseInt(Estado.m) + 2;
                     if(e.c == Estado.c && nm == e.m && e.b == 0){
-                        e.mv = "(" + Estado.c + "," + Estado.m + "," + Estado.b + ")";
+                        // e.mv = "(" + Estado.c + "," + Estado.m + "," + Estado.b + ")";
                         Estado.hijos.push(e);
                     }
                 }
@@ -227,8 +228,21 @@ exports.monjes_canibales = function  (req, res) {
                 fngrafo.M2C(e); 
                 fngrafo.M1M(e);
                 fngrafo.M1C(e);
-                fngrafo.M1CM(e);
+                fngrafo.M1CM(e); 
             });
+    }();
+
+
+      var printGrafo = function  () {
+        grafo.forEach(function  (e) {
+            // var text, text1 = '';
+            // text = "(" + e.c + "," + e.m + "," + e.b + ")";
+            // e.hijos.hijoM2M.forEach(function  (hijo) {
+            //     text1 = text1 + "("+ hijo.c + "," + hijo.m +"," + hijo.b + "," + hijo.mv +")|";
+            // });
+            // console.log(text + " => "+ text1)
+            console.log(e);
+        });
     }();
     
     res.render('inteligencia-artificial/monjes_canibales',

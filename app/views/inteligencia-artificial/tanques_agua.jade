@@ -1,11 +1,13 @@
 extends ../shared/layout
 
 block title
-    title Problema tanges de agua
+    title(class="text-center")
+        |Problema tanges de agua
 block content
-    h1 esto es una prueba de layout
+    h1(class="text-center")
+        |Problema tanques de agua
     for e in grafo
-        div(style="float:left")
+        div()
             p (#{e.x} , #{e.y})
             for hijo in e.hijos
                 span (#{hijo.x}, #{hijo.y})
